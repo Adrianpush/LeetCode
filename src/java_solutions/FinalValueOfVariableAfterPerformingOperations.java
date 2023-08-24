@@ -17,8 +17,8 @@ public class FinalValueOfVariableAfterPerformingOperations {
         public int finalValueAfterOperations(String[] operations) {
             int answerValue = 0;
             for (String operation : operations) {
-                if (operation.contains("-")){
-                    answerValue -=1;
+                if (operation.charAt(1) == '-') {
+                    answerValue -= 1;
                 } else {
                     answerValue += 1;
                 }
