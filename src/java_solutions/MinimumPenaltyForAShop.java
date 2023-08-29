@@ -21,29 +21,24 @@ public class MinimumPenaltyForAShop {
 
     class Solution {
         public int bestClosingTime(String customers) {
-            int numCustomers = 0;
-            for (int index = 0; index < customers.length(); index++) {
-                if (customers.charAt(index) == 'Y') {
-                    numCustomers++;
-                }
-            }
-            int penaltyAtPrevIndex = numCustomers;
-            int minPenalty = numCustomers;
+            int penaltyAtPrevIndex = 0;
+            int minPenalty = 0;
             int minPenaltyIndex = 0;
 
-            for (int index = 0; index < customers.length(); index++) {
+            for (int index = 0; index < customers.length(); index++){
                 int penaltyAtCurrentIndex = penaltyAtPrevIndex;
-                if (customers.charAt(index) == 'Y') {
+                if (customers.charAt(index) == 'Y'){
                     penaltyAtCurrentIndex--;
                 } else {
                     penaltyAtCurrentIndex++;
                 }
-                if (penaltyAtCurrentIndex < minPenalty) {
+                if (penaltyAtCurrentIndex < minPenalty){
                     minPenalty = penaltyAtCurrentIndex;
                     minPenaltyIndex = index + 1;
                 }
                 penaltyAtPrevIndex = penaltyAtCurrentIndex;
             }
+
             return minPenaltyIndex;
         }
     }
