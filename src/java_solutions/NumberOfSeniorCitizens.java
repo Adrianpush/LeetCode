@@ -1,4 +1,4 @@
-package session9.homework.leetcode;
+package src.java_solutions;
 
 public class NumberOfSeniorCitizens {
 

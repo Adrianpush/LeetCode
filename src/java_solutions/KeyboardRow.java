@@ -1,4 +1,4 @@
-package session9.homework.leetcode;
+package src.java_solutions;
 
 import java.util.ArrayList;
 import java.util.List;
