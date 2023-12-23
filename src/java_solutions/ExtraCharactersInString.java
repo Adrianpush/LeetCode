@@ -15,11 +15,6 @@ public class ExtraCharactersInString {
 
         HashSet<String> stringsSet = new HashSet<>(List.of(dict));
         System.out.println("result " + solveDFS(0, cache, stringsSet, input));
-
-
-
-
-
     }
 
     public static int solveDFS(int index, HashMap<Integer, Integer> cache, HashSet<String> set, String string) {
